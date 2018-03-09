@@ -1,10 +1,10 @@
-#Behave POC
+# Behave POC
 
-##Installation
+## Installation
 
 1. Install **Python**
   * This example should run with either Python 2 or 3, but I used 3
-  * [Here](http://docs.python-guide.org/en/latest/starting/install3/osx/) is a good example of installing Pythong 3 on OSX
+  * [Here](http://docs.python-guide.org/en/latest/starting/install3/osx/) is a good example of installing Python 3 on OSX
 2. Install **Behave**
   * Open Terminal, run `pip install behave`
 3. Install **selenium** for Python
@@ -20,7 +20,7 @@
   * Make sure the directory path to chromedriver is in your $PATH
     * compare `which chromedriver` and  `echo $PATH`
 
-##Run
+## Run
 * From Terminal, type:
   * `behave` to run all tests
   * `behave --tags=Test_FBG_Logo` to run a single test
