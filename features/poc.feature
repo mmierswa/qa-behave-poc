@@ -7,8 +7,8 @@ Feature: As a QA engineer, I want to demo basic functionality of Behave
       When we implement a test
       Then behave will test it for us!
 
-@Test_FBG_Logo
-  Scenario: Feedback Genius logo should be present
+@Test_FBG_Title
+  Scenario: Feedback Genius title should display expected results
     Given I visit the Feedback Genius page
     Then the title should say "Home Page - Feedback Genius"
 
