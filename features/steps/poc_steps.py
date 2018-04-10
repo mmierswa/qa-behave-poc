@@ -2,7 +2,7 @@ from behave import *
 
 @given(u'I visit the Feedback Genius page')
 def step_impl(context):
-    context.browser.get("https://www.feedbackgenius.com/")
+    context.browser.goto("https://www.feedbackgenius.com/")
 
 @then(u'the title should say "{title}"')
 def step_impl(context,title):
