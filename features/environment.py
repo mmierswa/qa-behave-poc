@@ -12,7 +12,8 @@ from nerodia.browser import Browser
     # context.browser.close()
 
 def before_all(context):
-    context.browser = Browser(browser='chrome')
+    # context.browser = Browser(browser='chrome')
+    context.browser = Browser(browser='chrome',args=['--no-sandbox'])
     # yield context.browser
 
 def after_all(context):
