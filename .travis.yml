@@ -6,7 +6,7 @@ python:
 install:
 - pip install behave
 - pip install pyyaml
-- pip install selenium==3.8.0
+- pip install selenium==3.13.0
 - pip install nerodia
 - pip install arrow
 - pip install json-encoder
