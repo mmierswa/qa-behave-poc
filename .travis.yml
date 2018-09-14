@@ -6,15 +6,13 @@ python:
 install:
 - pip install behave
 - pip install pyyaml
-- pip install selenium
+- pip install selenium==3.8.0
 - pip install nerodia
 - pip install arrow
 - pip install json-encoder
 - pip install requests
 - pip install mysqlclient
 - pip install simple-rest-client
-
-sudo: false
 
 addons:
   chrome: stable
