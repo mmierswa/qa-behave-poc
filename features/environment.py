@@ -3,8 +3,8 @@ from behave import fixture, use_fixture
 # from selenium import webdriver
 from nerodia.browser import Browser
 
-@fixture
-def selenium_browser_chrome(context):
+# @fixture
+# def selenium_browser_chrome(context):
     # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
     # context.browser = Browser(browser='chrome')
     # yield context.browser
@@ -13,7 +13,7 @@ def selenium_browser_chrome(context):
 
 def before_all(context):
     context.browser = Browser(browser='chrome')
-    yield context.browser
+    # yield context.browser
 
 def after_all(context):
     context.browser.close()

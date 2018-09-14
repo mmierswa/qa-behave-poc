@@ -26,4 +26,4 @@ before_script:
   - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
 
 script:
-- behave -k -f progress -t ~@wip -t @Peaceful
+- behave -k -f progress

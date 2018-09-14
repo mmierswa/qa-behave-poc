@@ -10,7 +10,7 @@ Feature: As a QA engineer, I want to demo basic functionality of Behave
 @Test_FBG_Title
   Scenario: Feedback Genius title should display expected results
     Given I visit the Feedback Genius page
-    Then the title should say "Home Page - Feedback Genius"
+    Then the title should say "Feedback Genius - Amazon Seller Feedback Software"
 
 #
 # @params
