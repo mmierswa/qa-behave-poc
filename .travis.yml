@@ -13,3 +13,6 @@ install:
 - pip install requests
 - pip install mysqlclient
 - pip install simple-rest-client
+
+script:
+- behave -k -f progress -t ~@wip -t @Peaceful
