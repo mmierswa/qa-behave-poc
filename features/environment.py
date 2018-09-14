@@ -6,16 +6,17 @@ from nerodia.browser import Browser
 @fixture
 def selenium_browser_chrome(context):
     # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
-    context.browser = Browser(browser='chrome')
-    yield context.browser
+    # context.browser = Browser(browser='chrome')
+    # yield context.browser
     # -- CLEANUP-FIXTURE PART:
-    context.browser.close()
+    # context.browser.close()
 
 def before_all(context):
-    #use_fixture(wsgi_server, context, port=8000)
-    use_fixture(selenium_browser_chrome, context)
-    # -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.
+    context.browser = Browser(browser='chrome')
+    yield context.browser
 
+def after_all(context):
+    context.browser.close()
 
 #example hooks:
 # def before_step(context, step)
