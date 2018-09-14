@@ -14,5 +14,16 @@ install:
 - pip install mysqlclient
 - pip install simple-rest-client
 
+addons:
+  chrome: stable
+
+addons:
+  apt:
+    packages:
+      - chromium-chromedriver
+
+before_script:
+  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
+
 script:
 - behave -k -f progress -t ~@wip -t @Peaceful
