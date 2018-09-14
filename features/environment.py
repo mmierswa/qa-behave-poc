@@ -12,12 +12,13 @@ from nerodia.browser import Browser
     # context.browser.close()
 
 def before_all(context):
-    # context.browser = Browser(browser='chrome')
     context.browser = Browser(browser='chrome', options={'headless': True, 'no-sandbox': True})
-    # yield context.browser
 
 def after_all(context):
-    context.browser.close()
+    try:
+        context.browser.close()
+    except AttributeError:
+        print("context has no browser attribute!")
 
 #example hooks:
 # def before_step(context, step)
