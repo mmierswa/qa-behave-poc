@@ -1,0 +1,15 @@
+language: python
+
+python:
+- '3.6'
+
+install:
+- pip install behave
+- pip install pyyaml
+- pip install selenium
+- pip install nerodia
+- pip install arrow
+- pip install json-encoder
+- pip install requests
+- pip install mysqlclient
+- pip install simple-rest-client
