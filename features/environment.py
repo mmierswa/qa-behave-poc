@@ -6,7 +6,7 @@ from nerodia.browser import Browser
 @fixture
 def selenium_browser_chrome(context):
     # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
-    context.browser = Browser(browser='firefox')
+    context.browser = Browser(browser='chrome')
     yield context.browser
     # -- CLEANUP-FIXTURE PART:
     context.browser.close()
