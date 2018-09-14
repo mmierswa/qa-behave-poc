@@ -3,8 +3,8 @@ from behave import fixture, use_fixture
 # from selenium import webdriver
 from nerodia.browser import Browser
 
-# @fixture
-# def selenium_browser_chrome(context):
+@fixture
+def selenium_browser_chrome(context):
     # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
     context.browser = Browser(browser='chrome', options={'headless': True, 'no-sandbox': True})
     yield context.browser
