@@ -6,13 +6,14 @@ from nerodia.browser import Browser
 # @fixture
 # def selenium_browser_chrome(context):
     # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
-    # context.browser = Browser(browser='chrome')
-    # yield context.browser
+    context.browser = Browser(browser='chrome', options={'headless': True, 'no-sandbox': True})
+    yield context.browser
     # -- CLEANUP-FIXTURE PART:
-    # context.browser.close()
+    context.browser.close()
 
 def before_all(context):
-    context.browser = Browser(browser='chrome', options={'headless': True, 'no-sandbox': True})
+    use_fixture(selenium_browser_chrome, context)
+    # context.browser = Browser(browser='chrome', options={'headless': True, 'no-sandbox': True})
 
 def after_all(context):
     try:
